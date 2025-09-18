@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}BBHC Outlet{% endblock %}</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/bbhc-logo.svg') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    {% block head_extra %}{% endblock %}
+    <style>
+        .navbar-actions{display:flex;gap:24px;align-items:center}
+        .navbar-btn{display:flex;align-items:center;gap:8px;cursor:pointer}
+        .navbar-btn:hover{color:rgb(244,51,151)}
+        .navbar-btn i{font-size:18px}
+    </style>
+</head>
+<body>
+    {% block content %}{% endblock %}
+    {% block scripts %}
+    <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% endblock %}
+</body>
+</html>
+
+

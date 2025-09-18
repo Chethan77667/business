@@ -1,0 +1,673 @@
+{% extends 'base.html' %}
+{% block title %}Online Shopping Site for Fashion, Electronics, Home & More | BBHC Outlet{% endblock %}
+
+{% block content %}
+<header class="header">
+    <div class="headerLeft">
+        <div class="logoContainer">
+            <img src="{{ url_for('static', filename='img/bbhc-logo.svg') }}" alt="BBHC Outlet" />
+        </div>
+        <div class="searchInputContainer">
+            <div class="searchIcon">
+                <img src="{{ url_for('static', filename='images/icons/search.png') }}" />
+            </div>
+            <form action="" id="inputForm">
+                <input type="text" placeholder="Search BBHC Outlet Products" class="inputSearch" />
+            </form>
+            <div class="inputCloseSearch">
+                <i class="fa-solid fa-xmark" id="closeSearch"></i>
+            </div>
+            <div class="searchRecentModal">
+                <h3>Recent Searches</h3>
+                <div class="listofRecent"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="headerRight">
+        <div class="downloadContainer navbar-btn">
+            <div class="mobileIcon">
+                <img src="{{ url_for('static', filename='images/icons/mobile.png') }}" />
+            </div>
+            <p>Download App</p>
+            <div class="downloadHoverBtnContainer">
+                <h3>Download From</h3>
+                <a href="#" class="downloadBtn">
+                    <div style="background: #000; color: white; padding: 10px; border-radius: 5px; text-align: center; font-weight: bold;">GET IT ON<br>Google Play</div>
+                </a>
+                <a href="#" class="downloadBtn">
+                    <div style="background: #000; color: white; padding: 10px; border-radius: 5px; text-align: center; font-weight: bold;">Download on the<br>App Store</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="becomeSupplierContainer navbar-btn">
+            <p>Become a BBHC Supplier</p>
+        </div>
+
+        <div class="profileAndCart navbar-actions">
+            <div class="profileContainer navbar-btn">
+                <div class="profileIcon">
+                    <img src="{{ url_for('static', filename='images/icons/user.png') }}" />
+                </div>
+                <p>Profile</p>
+            </div>
+            <div class="CartContainer navbar-btn">
+                <div class="CartIcon">
+                    <img src="{{ url_for('static', filename='images/icons/cart.png') }}" />
+                </div>
+                <p>Cart</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li>Women Ethnic
+            <div class="subMenu"><div id="womenEthic" class="submenuList"></div></div>
+        </li>
+        <li>Women Western
+            <div class="subMenu"><div id="womenWestern" class="submenuList"></div></div>
+        </li>
+        <li>Men
+            <div class="subMenu"><div id="men" class="submenuList"></div></div>
+        </li>
+        <li>Kids
+            <div class="subMenu"><div id="kids" class="submenuList"></div></div>
+        </li>
+        <li>Home & Kitchen
+            <div class="subMenu"><div id="HomeAndKitchen" class="submenuList"></div></div>
+        </li>
+        <li>Beauty & Health
+            <div class="subMenu"><div id="beautyAndHealth" class="submenuList"></div></div>
+        </li>
+        <li>Jewellery & Accessories
+            <div class="subMenu"><div id="JewelleryAndAccessories" class="submenuList"></div></div>
+        </li>
+        <li>Bags & Footwear
+            <div class="subMenu"><div id="BagsFootWarId" class="submenuList"></div></div>
+        </li>
+        <li>Electronics
+            <div class="subMenu"><div id="ElectronicsId" class="submenuList"></div></div>
+        </li>
+    </ul>
+</nav>
+
+<div class="lowestpriceContainer">
+    <div class="lowestPrice_text">
+        <h1>Lowest Prices </h1>
+        <h1>Best Quality Shopping</h1>
+        <div class="lowestPriceWhay">
+            <div class="lowestPriceItem">
+                <div class="lowestPrice_icon">
+                    <img src="{{ url_for('static', filename='images/icons/free-delivery.svg') }}" style="width: 30px; height: 30px;" />
+                </div>
+                <p>Free Delivery</p>
+            </div>
+            <div class="lowestPriceItem">
+                <div class="lowestPrice_icon">
+                    <img src="{{ url_for('static', filename='images/icons/cash-delivery.svg') }}" style="width: 30px; height: 30px;" />
+                </div>
+                <p>Cash on Delivery</p>
+            </div>
+            <div class="lowestPriceItem">
+                <div class="lowestPrice_icon">
+                    <img src="{{ url_for('static', filename='images/icons/easy-returns.svg') }}" style="width: 30px; height: 30px;" />
+                </div>
+                <p>Easy Returns</p>
+            </div>
+        </div>
+        <button class="downloadApp_contianer">
+            <div class="downloadAppIcon">
+                <div style="width: 20px; height: 20px; background: white; border-radius: 3px; display: flex; align-items: center; justify-content: center; color: #F43397; font-weight: bold;">▶</div>
+            </div>
+            <p>Download the BBHC Outlet App</p>
+        </button>
+    </div>
+    <div class="lowestPrice_image">
+        <img src="{{ url_for('static', filename='images/banners/main-banner.svg') }}" style="width: 100%; height: 400px;" />
+    </div>
+    </div>
+
+<div class="topCategoriesFrom">
+    <div class="topCategoriesHeading">
+        <span class="horizontalLine"></span>
+        <h1>Top Categories to choose from</h1>
+        <span class="horizontalLine"></span>
+    </div>
+    <div class="topCategoreisImage">
+        <img src="{{ url_for('static', filename='images/categories/womens-wear.svg') }}" style="max-width: 300px; height: 200px; margin: 10px;" />
+        <img src="{{ url_for('static', filename='images/categories/mens-wear.svg') }}" style="max-width: 300px; height: 200px; margin: 10px;" />
+        <img src="{{ url_for('static', filename='images/categories/kids-wear.svg') }}" style="max-width: 300px; height: 200px; margin: 10px;" />
+    </div>
+    <div class="essentialContaienr">
+        <div class="essen-btn" style="background: #FFF3E0; height: 150px; display: flex; align-items: center; justify-content: center; color: #F43397; font-weight: bold; border-radius: 10px;">ESSENTIALS</div>
+        <div class="essential_item">
+            <div style="background: #FFE0E6; height: 100px; display: flex; align-items: center; justify-content: center; color: #F43397; font-weight: bold; margin: 5px; border-radius: 5px;">Beauty</div>
+            <div style="background: #E8F5E8; height: 100px; display: flex; align-items: center; justify-content: center; color: #F43397; font-weight: bold; margin: 5px; border-radius: 5px;">Home</div>
+        </div>
+        <div class="essential_item">
+            <div style="background: #E3F2FD; height: 100px; display: flex; align-items: center; justify-content: center; color: #F43397; font-weight: bold; margin: 5px; border-radius: 5px;">Electronics</div>
+            <div style="background: #F1F8E9; height: 100px; display: flex; align-items: center; justify-content: center; color: #F43397; font-weight: bold; margin: 5px; border-radius: 5px;">Accessories</div>
+        </div>
+        <div class="essential_item">
+            <div style="background: #FCE4EC; height: 100px; display: flex; align-items: center; justify-content: center; color: #F43397; font-weight: bold; margin: 5px; border-radius: 5px;">Fashion</div>
+            <div style="background: #E0F2F1; height: 100px; display: flex; align-items: center; justify-content: center; color: #F43397; font-weight: bold; margin: 5px; border-radius: 5px;">Jewellery</div>
+        </div>
+    </div>
+
+    <div class="becomesellerBanner_Container">
+        <img src="{{ url_for('static', filename='images/banners/seller-banner.svg') }}" class="becomesellerBanner" style="width: 100%; height: 300px;" />
+        <div class="becomeSeller_Content">
+            <div class="becomeSeller_content_content">
+                <h2>Become a Seller and </h2>
+                <h1>Start your Online Business with Zero Investment</h1>
+                <div class=" becomerSeller_appDownload_container">
+                    <a href="#" class="becomerSeller_appDownload">
+                        <div style="background: #000; color: white; padding: 15px; border-radius: 5px; text-align: center; font-weight: bold;">GET IT ON<br>Google Play</div>
+                    </a>
+                    <a href="#" class="becomerSeller_appDownload">
+                        <div style="background: #000; color: white; padding: 15px; border-radius: 5px; text-align: center; font-weight: bold;">Download on the<br>App Store</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="meesho_supper_container">
+        <img src="{{ url_for('static', filename='images/banners/supplier-banner.svg') }}" style="width: 100%; height: 400px;" />
+        <div class="meesho_supper_container_content">
+            <div class="meesho_supper_container_content_content">
+                <h1>Register as a BBHC Outlet Supplier</h1>
+                <p>Sell your products to crores of customers at 0% commission</p>
+                <div class="meesho-suppliear_benifit_container">
+                    <div class="meesho_supper_benifit">
+                        <img class="meeesho_benifit_image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMCAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDEwLjVDMCA0Ljk4IDQuNDggMC41IDEwIDAuNUMxNS41MiAwLjUgMjAgNC45OCAyMCAxMC41QzIwIDE2LjAyIDE1LjUyIDIwLjUgMTAgMjAuNUM0LjQ4IDIwLjUgMCAxNi4wMiAwIDEwLjVaTTcuMjgyODggMTQuNzkyNUM3LjY3Mjg4IDE1LjE4MjUgOC4zMDI4OCAxNS4xODI1IDguNjkyODggMTQuNzkyNUwxNi4yNzI5IDcuMjAyNUMxNi42NjI5IDYuODEyNSAxNi42NjI5IDYuMTgyNSAxNi4yNzI5IDUuNzkyNUMxNS44ODI5IDUuNDAyNSAxNS4yNTI5IDUuNDAyNSAxNC44NjI5IDUuNzkyNUw3Ljk4Mjg4IDEyLjY3MjVMNS4xMDI4OCA5Ljc5MjVDNC43MTI4OCA5LjQwMjUgNC4wODI4OCA5LjQwMjUgMy42OTI4OCA5Ljc5MjVDMy41MDU2MiA5Ljk3OTMzIDMuNDAwMzkgMTAuMjMzIDMuNDAwMzkgMTAuNDk3NUMzLjQwMDM5IDEwLjc2MiAzLjUwNTYyIDExLjAxNTcgMy42OTI4OCAxMS4yMDI1TDcuMjgyODggMTQuNzkyNVoiIGZpbGw9IiMwNkE3NTkiLz4KPC9zdmc+Cg==" />
+                        <p>Grow your business 10x</p>
+                    </div>
+                    <div class="meesho_supper_benifit">
+                        <img class="meeesho_benifit_image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMCAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDEwLjVDMCA0Ljk4IDQuNDggMC41IDEwIDAuNUMxNS41MiAwLjUgMjAgNC45OCAyMCAxMC41QzIwIDE2LjAyIDE1LjUyIDIwLjUgMTAgMjAuNUM0LjQ4IDIwLjUgMCAxNi4wMiAwIDEwLjVaTTcuMjgyODggMTQuNzkyNUM3LjY3Mjg4IDE1LjE4MjUgOC4zMDI4OCAxNS4xODI1IDguNjkyODggMTQuNzkyNUwxNi4yNzI5IDcuMjAyNUMxNi42NjI5IDYuODEyNSAxNi42NjI5IDYuMTgyNSAxNi4yNzI5IDUuNzkyNUMxNS44ODI5IDUuNDAyNSAxNS4yNTI5IDUuNDAyNSAxNC44NjI5IDUuNzkyNUw3Ljk4Mjg4IDEyLjY3MjVMNS4xMDI4OCA5Ljc5MjVDNC43MTI4OCA5LjQwMjUgNC4wODI4OCA5LjQwMjUgMy42OTI4OCA5Ljc5MjVDMy41MDU2MiA5Ljk3OTMzIDMuNDAwMzkgMTAuMjMzIDMuNDAwMzkgMTAuNDk3NUMzLjQwMDM5IDEwLjc2MiAzLjUwNTYyIDExLjAxNTcgMy42OTI4OCAxMS4yMDI1TDcuMjgyODggMTQuNzkyNVoiIGZpbGw9IiMwNkE3NTkiLz4KPC9zdmc+Cg==" />
+                        <p>Enjoy 100% Profit</p>
+                    </div>
+                    <div class="meesho_supper_benifit">
+                        <img class="meeesho_benifit_image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMCAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDEwLjVDMCA0Ljk4IDQuNDggMC41IDEwIDAuNUMxNS41MiAwLjUgMjAgNC45OCAyMCAxMC41QzIwIDE2LjAyIDE1LjUyIDIwLjUgMTAgMjAuNUM0LjQ4IDIwLjUgMCAxNi4wMiAwIDEwLjVaTTcuMjgyODggMTQuNzkyNUM3LjY3Mjg4IDE1LjE4MjUgOC4zMDI4OCAxNS4xODI1IDguNjkyODggMTQuNzkyNUwxNi4yNzI5IDcuMjAyNUMxNi42NjI5IDYuODEyNSAxNi42NjI5IDYuMTgyNSAxNi4yNzI5IDUuNzkyNUMxNS44ODI5IDUuNDAyNSAxNS4yNTI5IDUuNDAyNSAxNC44NjI5IDUuNzkyNUw3Ljk4Mjg4IDEyLjY3MjVMNS4xMDI4OCA5Ljc5MjVDNC43MTI4OCA5LjQwMjUgNC4wODI4OCA5LjQwMjUgMy42OTI4OCA5Ljc5MjVDMy41MDU2MiA5Ljk3OTMzIDMuNDAwMzkgMTAuMjMzIDMuNDAwMzkgMTAuNDk3NUMzLjQwMDM5IDEwLjc2MiAzLjUwNTYyIDExLjAxNTcgMy42OTI4OCAxMS4yMDI1TDcuMjgyODggMTQuNzkyNVoiIGZpbGw9IiMwNkE3NTkiLz4KPC9zdmc+Cg==" />
+                        <p>Sell all over India</p>
+                    </div>
+                </div>
+                <a href="#" class="signup_btn_now">Sign up now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="Product_container_You">
+    <h1>Products For You</h1>
+    <div class="product_container_you_content">
+        <aside class="product_category_you_aside">
+            <h3>Category</h3>
+            <div class="search_category_input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search"/>
+            </div>
+            <div class="display_Category_list">
+                <label for="bluetooth"><input type="checkbox" id="bluetooth"/><span>bluetooth Headset</span></label>
+                <label for="chains"><input type="checkbox" id="chains"/><span>Men Chains</span></label>
+                <label for="kurtas"><input type="checkbox" id="kurtas"/><span>Kurtas</span></label>
+                <label for="accessories"><input type="checkbox" id="accessories"/><span>Mobile Accessories</span></label>
+                <label for="sarees"><input type="checkbox" id="sarees"/><span>sarees</span></label>
+                <label for="watch"><input type="checkbox" id="watch"/><span>watch</span></label>
+            </div>
+        </aside>
+        <main class="product_category_display" id="product_category_displayId">
+            <!-- render product -->
+        </main>
+    </div>
+</div>
+
+<!-- Hero Section with Real Image -->
+<div class="hero-section">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>Welcome to BBHC Outlet</h1>
+            <p>Discover amazing products at unbeatable prices</p>
+            <div class="hero-buttons">
+                <button class="btn-primary">Shop Now</button>
+                <button class="btn-secondary">View Categories</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0003.jpg') }}" alt="BBHC Hero" />
+        </div>
+    </div>
+</div>
+
+<!-- Featured Products Showcase -->
+<div class="featured-products-section">
+    <div class="container">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="featured-grid">
+            <div class="featured-item">
+                <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0003.jpg') }}" alt="BBHC Product 1" />
+                <div class="featured-overlay">
+                    <h3>Premium Collection</h3>
+                    <p>Starting from ₹299</p>
+                    <button class="shop-btn">Shop Now</button>
+                </div>
+            </div>
+            <div class="featured-item">
+                <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0026.jpg') }}" alt="BBHC Product 2" />
+                <div class="featured-overlay">
+                    <h3>Fashion Trends</h3>
+                    <p>Starting from ₹199</p>
+                    <button class="shop-btn">Shop Now</button>
+                </div>
+            </div>
+            <div class="featured-item">
+                <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0027.jpg') }}" alt="BBHC Product 3" />
+                <div class="featured-overlay">
+                    <h3>New Arrivals</h3>
+                    <p>Starting from ₹399</p>
+                    <button class="shop-btn">Shop Now</button>
+                </div>
+            </div>
+            
+            <div class="featured-item">
+                <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0031.jpg') }}" alt="BBHC Product 5" />
+                <div class="featured-overlay">
+                    <h3>Handmade Collection</h3>
+                    <p>Starting from ₹199</p>
+                    <button class="shop-btn">Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Image Gallery Section -->
+<div class="gallery-section">
+    <div class="container">
+        <h2 class="section-title">BBHC Outlet Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item large">
+                <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0030.jpg') }}" alt="BBHC Gallery 1" />
+                <div class="gallery-overlay">
+                    <h3>Premium Quality</h3>
+                    <p>Products you Love. Quality we Trust.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0026.jpg') }}" alt="BBHC Gallery 2" />
+                <div class="gallery-overlay">
+                    <h3>Fashion Forward</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0032.jpg') }}" alt="BBHC Gallery 3" />
+                <div class="gallery-overlay">
+                    <h3>Trending Now</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0033.jpg') }}" alt="BBHC Gallery 4" />
+                <div class="gallery-overlay">
+                    <h3>New Collection</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Special Offer Banner -->
+<div class="special-offer-banner">
+    <div class="container">
+        <div class="offer-content">
+            <div class="offer-text">
+                <h2>Special Offer</h2>
+                <h1>Up to 80% OFF</h1>
+                <p>On Selected Items</p>
+                <button class="offer-btn">Shop Now</button>
+            </div>
+            <div class="offer-image">
+                <img src="{{ url_for('static', filename='images/showcase/logo-removebg-preview.png') }}" alt="BBHC Special Offer" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.hero-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #F43397 0%, #FF6B9D 100%);
+    color: white;
+    margin: 40px 0;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary {
+    background: white;
+    color: #F43397;
+}
+
+.btn-primary:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #F43397;
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text h1 {
+        font-size: 36px;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .hero-image {
+        max-width: 100%;
+    }
+}
+
+.featured-products-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #F43397;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #F43397;
+    border-radius: 2px;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.featured-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.featured-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.featured-item:hover img {
+    transform: scale(1.1);
+}
+
+.featured-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 30px 20px 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.featured-item:hover .featured-overlay {
+    transform: translateY(0);
+}
+
+.featured-overlay h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.featured-overlay p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.shop-btn {
+    background: #F43397;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.shop-btn:hover {
+    background: #e02d85;
+}
+
+.gallery-section {
+    padding: 60px 0;
+    background: white;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    height: 500px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.gallery-item.large {
+    grid-row: span 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery-overlay h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.special-offer-banner {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #F43397, #FF6B9D);
+    color: white;
+}
+
+.offer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.offer-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.offer-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.offer-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.offer-btn {
+    background: white;
+    color: #F43397;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.offer-btn:hover {
+    transform: scale(1.05);
+}
+
+.offer-image img {
+    max-width: 300px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    
+    .gallery-item.large {
+        grid-row: span 1;
+    }
+    
+    .offer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .offer-text h1 {
+        font-size: 36px;
+    }
+}
+</style>
+
+{% endblock %}
+
+

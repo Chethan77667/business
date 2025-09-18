@@ -1,0 +1,18 @@
+<svg width="800" height="300" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" style="stop-color:#F43397;stop-opacity:1" />
+<stop offset="100%" style="stop-color:#FF6B9D;stop-opacity:1" />
+</linearGradient>
+</defs>
+<rect width="800" height="300" fill="url(#grad2)"/>
+<text x="400" y="80" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">Become a Seller and</text>
+<text x="400" y="120" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">Start your Online Business</text>
+<text x="400" y="150" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">with Zero Investment</text>
+<rect x="300" y="180" width="120" height="40" rx="20" fill="white" opacity="0.9"/>
+<rect x="450" y="180" width="120" height="40" rx="20" fill="white" opacity="0.9"/>
+<text x="360" y="205" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#F43397" text-anchor="middle">GET IT ON</text>
+<text x="360" y="220" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#F43397" text-anchor="middle">Google Play</text>
+<text x="510" y="205" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#F43397" text-anchor="middle">Download on the</text>
+<text x="510" y="220" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#F43397" text-anchor="middle">App Store</text>
+</svg>
