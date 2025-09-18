@@ -130,100 +130,111 @@
     </div>
     </div>
 
-<div class="topCategoriesFrom">
-    <div class="topCategoriesHeading">
-        <span class="horizontalLine"></span>
-        <h1>Top Categories to choose from</h1>
-        <span class="horizontalLine"></span>
-    </div>
-    <div class="topCategoreisImage">
-        <img src="{{ url_for('static', filename='images/categories/womens-wear.svg') }}" style="max-width: 300px; height: 200px; margin: 10px;" />
-        <img src="{{ url_for('static', filename='images/categories/mens-wear.svg') }}" style="max-width: 300px; height: 200px; margin: 10px;" />
-        <img src="{{ url_for('static', filename='images/categories/kids-wear.svg') }}" style="max-width: 300px; height: 200px; margin: 10px;" />
-    </div>
-    <div class="essentialContaienr">
-        <div class="essen-btn" style="background: #FFF3E0; height: 150px; display: flex; align-items: center; justify-content: center; color: #F43397; font-weight: bold; border-radius: 10px;">ESSENTIALS</div>
-        <div class="essential_item">
-            <div style="background: #FFE0E6; height: 100px; display: flex; align-items: center; justify-content: center; color: #F43397; font-weight: bold; margin: 5px; border-radius: 5px;">Beauty</div>
-            <div style="background: #E8F5E8; height: 100px; display: flex; align-items: center; justify-content: center; color: #F43397; font-weight: bold; margin: 5px; border-radius: 5px;">Home</div>
+<!-- Auto-Moving Carousel Section -->
+<div class="carousel-section">
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <div class="slide-content">
+                <div class="slide-text">
+                    <h2>BBHC Outlet</h2>
+                    <h1>Fashion Collection</h1>
+                    <p>Lowest Prices • Best Quality • Free Delivery</p>
+                    <button class="carousel-btn">Shop Now</button>
+                </div>
+                <div class="slide-image">
+                    <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0003.jpg') }}" alt="BBHC Fashion" />
+                </div>
+            </div>
         </div>
-        <div class="essential_item">
-            <div style="background: #E3F2FD; height: 100px; display: flex; align-items: center; justify-content: center; color: #F43397; font-weight: bold; margin: 5px; border-radius: 5px;">Electronics</div>
-            <div style="background: #F1F8E9; height: 100px; display: flex; align-items: center; justify-content: center; color: #F43397; font-weight: bold; margin: 5px; border-radius: 5px;">Accessories</div>
+        
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <div class="slide-text">
+                    <h2>New Arrivals</h2>
+                    <h1>Trending Now</h1>
+                    <p>Fresh Styles • Latest Designs • Affordable Prices</p>
+                    <button class="carousel-btn">Explore</button>
+                </div>
+                <div class="slide-image">
+                    <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0026.jpg') }}" alt="BBHC New Arrivals" />
+                </div>
+            </div>
         </div>
-        <div class="essential_item">
-            <div style="background: #FCE4EC; height: 100px; display: flex; align-items: center; justify-content: center; color: #F43397; font-weight: bold; margin: 5px; border-radius: 5px;">Fashion</div>
-            <div style="background: #E0F2F1; height: 100px; display: flex; align-items: center; justify-content: center; color: #F43397; font-weight: bold; margin: 5px; border-radius: 5px;">Jewellery</div>
+        
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <div class="slide-text">
+                    <h2>Special Offer</h2>
+                    <h1>Up to 80% OFF</h1>
+                    <p>Limited Time • Best Deals • Don't Miss Out</p>
+                    <button class="carousel-btn">Grab Deal</button>
+                </div>
+                <div class="slide-image">
+                    <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0027.jpg') }}" alt="BBHC Special Offer" />
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="becomesellerBanner_Container">
-        <img src="{{ url_for('static', filename='images/banners/seller-banner.svg') }}" class="becomesellerBanner" style="width: 100%; height: 300px;" />
-        <div class="becomeSeller_Content">
-            <div class="becomeSeller_content_content">
-                <h2>Become a Seller and </h2>
-                <h1>Start your Online Business with Zero Investment</h1>
-                <div class=" becomerSeller_appDownload_container">
-                    <a href="#" class="becomerSeller_appDownload">
-                        <div style="background: #000; color: white; padding: 15px; border-radius: 5px; text-align: center; font-weight: bold;">GET IT ON<br>Google Play</div>
-                    </a>
-                    <a href="#" class="becomerSeller_appDownload">
-                        <div style="background: #000; color: white; padding: 15px; border-radius: 5px; text-align: center; font-weight: bold;">Download on the<br>App Store</div>
-                    </a>
+        
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <div class="slide-text">
+                    <h2>Handmade Collection</h2>
+                    <h1>Artisan Crafted</h1>
+                    <p>Unique Designs • Handcrafted • Premium Quality</p>
+                    <button class="carousel-btn">Discover</button>
+                </div>
+                <div class="slide-image">
+                    <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0031.jpg') }}" alt="BBHC Handmade" />
                 </div>
             </div>
         </div>
     </div>
+    
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+        <span class="indicator active" data-slide="0"></span>
+        <span class="indicator" data-slide="1"></span>
+        <span class="indicator" data-slide="2"></span>
+        <span class="indicator" data-slide="3"></span>
+    </div>
+</div>
 
-    <div class="meesho_supper_container">
-        <img src="{{ url_for('static', filename='images/banners/supplier-banner.svg') }}" style="width: 100%; height: 400px;" />
-        <div class="meesho_supper_container_content">
-            <div class="meesho_supper_container_content_content">
-                <h1>Register as a BBHC Outlet Supplier</h1>
-                <p>Sell your products to crores of customers at 0% commission</p>
-                <div class="meesho-suppliear_benifit_container">
-                    <div class="meesho_supper_benifit">
-                        <img class="meeesho_benifit_image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMCAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDEwLjVDMCA0Ljk4IDQuNDggMC41IDEwIDAuNUMxNS41MiAwLjUgMjAgNC45OCAyMCAxMC41QzIwIDE2LjAyIDE1LjUyIDIwLjUgMTAgMjAuNUM0LjQ4IDIwLjUgMCAxNi4wMiAwIDEwLjVaTTcuMjgyODggMTQuNzkyNUM3LjY3Mjg4IDE1LjE4MjUgOC4zMDI4OCAxNS4xODI1IDguNjkyODggMTQuNzkyNUwxNi4yNzI5IDcuMjAyNUMxNi42NjI5IDYuODEyNSAxNi42NjI5IDYuMTgyNSAxNi4yNzI5IDUuNzkyNUMxNS44ODI5IDUuNDAyNSAxNS4yNTI5IDUuNDAyNSAxNC44NjI5IDUuNzkyNUw3Ljk4Mjg4IDEyLjY3MjVMNS4xMDI4OCA5Ljc5MjVDNC43MTI4OCA5LjQwMjUgNC4wODI4OCA5LjQwMjUgMy42OTI4OCA5Ljc5MjVDMy41MDU2MiA5Ljk3OTMzIDMuNDAwMzkgMTAuMjMzIDMuNDAwMzkgMTAuNDk3NUMzLjQwMDM5IDEwLjc2MiAzLjUwNTYyIDExLjAxNTcgMy42OTI4OCAxMS4yMDI1TDcuMjgyODggMTQuNzkyNVoiIGZpbGw9IiMwNkE3NTkiLz4KPC9zdmc+Cg==" />
-                        <p>Grow your business 10x</p>
-                    </div>
-                    <div class="meesho_supper_benifit">
-                        <img class="meeesho_benifit_image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMCAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDEwLjVDMCA0Ljk4IDQuNDggMC41IDEwIDAuNUMxNS41MiAwLjUgMjAgNC45OCAyMCAxMC41QzIwIDE2LjAyIDE1LjUyIDIwLjUgMTAgMjAuNUM0LjQ4IDIwLjUgMCAxNi4wMiAwIDEwLjVaTTcuMjgyODggMTQuNzkyNUM3LjY3Mjg4IDE1LjE4MjUgOC4zMDI4OCAxNS4xODI1IDguNjkyODggMTQuNzkyNUwxNi4yNzI5IDcuMjAyNUMxNi42NjI5IDYuODEyNSAxNi42NjI5IDYuMTgyNSAxNi4yNzI5IDUuNzkyNUMxNS44ODI5IDUuNDAyNSAxNS4yNTI5IDUuNDAyNSAxNC44NjI5IDUuNzkyNUw3Ljk4Mjg4IDEyLjY3MjVMNS4xMDI4OCA5Ljc5MjVDNC43MTI4OCA5LjQwMjUgNC4wODI4OCA5LjQwMjUgMy42OTI4OCA5Ljc5MjVDMy41MDU2MiA5Ljk3OTMzIDMuNDAwMzkgMTAuMjMzIDMuNDAwMzkgMTAuNDk3NUMzLjQwMDM5IDEwLjc2MiAzLjUwNTYyIDExLjAxNTcgMy42OTI4OCAxMS4yMDI1TDcuMjgyODggMTQuNzkyNVoiIGZpbGw9IiMwNkE3NTkiLz4KPC9zdmc+Cg==" />
-                        <p>Enjoy 100% Profit</p>
-                    </div>
-                    <div class="meesho_supper_benifit">
-                        <img class="meeesho_benifit_image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMCAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDEwLjVDMCA0Ljk4IDQuNDggMC41IDEwIDAuNUMxNS41MiAwLjUgMjAgNC45OCAyMCAxMC41QzIwIDE2LjAyIDE1LjUyIDIwLjUgMTAgMjAuNUM0LjQ4IDIwLjUgMCAxNi4wMiAwIDEwLjVaTTcuMjgyODggMTQuNzkyNUM3LjY3Mjg4IDE1LjE4MjUgOC4zMDI4OCAxNS4xODI1IDguNjkyODggMTQuNzkyNUwxNi4yNzI5IDcuMjAyNUMxNi42NjI5IDYuODEyNSAxNi42NjI5IDYuMTgyNSAxNi4yNzI5IDUuNzkyNUMxNS44ODI5IDUuNDAyNSAxNS4yNTI5IDUuNDAyNSAxNC44NjI5IDUuNzkyNUw3Ljk4Mjg4IDEyLjY3MjVMNS4xMDI4OCA5Ljc5MjVDNC43MTI4OCA5LjQwMjUgNC4wODI4OCA5LjQwMjUgMy42OTI4OCA5Ljc5MjVDMy41MDU2MiA5Ljk3OTMzIDMuNDAwMzkgMTAuMjMzIDMuNDAwMzkgMTAuNDk3NUMzLjQwMDM5IDEwLjc2MiAzLjUwNTYyIDExLjAxNTcgMy42OTI4OCAxMS4yMDI1TDcuMjgyODggMTQuNzkyNVoiIGZpbGw9IiMwNkE3NTkiLz4KPC9zdmc+Cg==" />
-                        <p>Sell all over India</p>
-                    </div>
+<!-- Icon Features Section -->
+<div class="icon-features-section">
+    <div class="container">
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <img src="{{ url_for('static', filename='images/icons/free-delivery.svg') }}" alt="Free Delivery" />
                 </div>
-                <a href="#" class="signup_btn_now">Sign up now</a>
+                <h3>Free Delivery</h3>
+                <p>On orders above ₹299</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <img src="{{ url_for('static', filename='images/icons/cash-delivery.svg') }}" alt="Cash on Delivery" />
+                </div>
+                <h3>Cash on Delivery</h3>
+                <p>Pay when you receive</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <img src="{{ url_for('static', filename='images/icons/easy-returns.svg') }}" alt="Easy Returns" />
+                </div>
+                <h3>Easy Returns</h3>
+                <p>30-day return policy</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Secure Payment</h3>
+                <p>100% secure transactions</p>
             </div>
         </div>
     </div>
 </div>
 
-<div class="Product_container_You">
-    <h1>Products For You</h1>
-    <div class="product_container_you_content">
-        <aside class="product_category_you_aside">
-            <h3>Category</h3>
-            <div class="search_category_input">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search"/>
-            </div>
-            <div class="display_Category_list">
-                <label for="bluetooth"><input type="checkbox" id="bluetooth"/><span>bluetooth Headset</span></label>
-                <label for="chains"><input type="checkbox" id="chains"/><span>Men Chains</span></label>
-                <label for="kurtas"><input type="checkbox" id="kurtas"/><span>Kurtas</span></label>
-                <label for="accessories"><input type="checkbox" id="accessories"/><span>Mobile Accessories</span></label>
-                <label for="sarees"><input type="checkbox" id="sarees"/><span>sarees</span></label>
-                <label for="watch"><input type="checkbox" id="watch"/><span>watch</span></label>
-            </div>
-        </aside>
-        <main class="product_category_display" id="product_category_displayId">
-            <!-- render product -->
-        </main>
-    </div>
-</div>
 
 <!-- Hero Section with Real Image -->
 <div class="hero-section">
@@ -248,36 +259,142 @@
         <h2 class="section-title">Featured Products</h2>
         <div class="featured-grid">
             <div class="featured-item">
-                <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0003.jpg') }}" alt="BBHC Product 1" />
-                <div class="featured-overlay">
+                <div class="product-image-container">
+                    <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0003.jpg') }}" alt="BBHC Product 1" />
+                    <div class="product-icons">
+                        <div class="icon-circle">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="icon-circle">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="icon-circle">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="fixed-shop-btn">
+                        <button class="shop-now-btn">
+                            <i class="fas fa-shopping-bag"></i>
+                            Shop Now
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
                     <h3>Premium Collection</h3>
                     <p>Starting from ₹299</p>
-                    <button class="shop-btn">Shop Now</button>
-                </div>
-            </div>
-            <div class="featured-item">
-                <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0026.jpg') }}" alt="BBHC Product 2" />
-                <div class="featured-overlay">
-                    <h3>Fashion Trends</h3>
-                    <p>Starting from ₹199</p>
-                    <button class="shop-btn">Shop Now</button>
-                </div>
-            </div>
-            <div class="featured-item">
-                <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0027.jpg') }}" alt="BBHC Product 3" />
-                <div class="featured-overlay">
-                    <h3>New Arrivals</h3>
-                    <p>Starting from ₹399</p>
-                    <button class="shop-btn">Shop Now</button>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(4.8)</span>
+                    </div>
                 </div>
             </div>
             
             <div class="featured-item">
-                <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0031.jpg') }}" alt="BBHC Product 5" />
-                <div class="featured-overlay">
+                <div class="product-image-container">
+                    <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0026.jpg') }}" alt="BBHC Product 2" />
+                    <div class="product-icons">
+                        <div class="icon-circle">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="icon-circle">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="icon-circle">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="fixed-shop-btn">
+                        <button class="shop-now-btn">
+                            <i class="fas fa-shopping-bag"></i>
+                            Shop Now
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Fashion Trends</h3>
+                    <p>Starting from ₹199</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(4.2)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="featured-item">
+                <div class="product-image-container">
+                    <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0027.jpg') }}" alt="BBHC Product 3" />
+                    <div class="product-icons">
+                        <div class="icon-circle">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="icon-circle">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="icon-circle">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="fixed-shop-btn">
+                        <button class="shop-now-btn">
+                            <i class="fas fa-shopping-bag"></i>
+                            Shop Now
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>New Arrivals</h3>
+                    <p>Starting from ₹399</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(4.9)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="featured-item">
+                <div class="product-image-container">
+                    <img src="{{ url_for('static', filename='images/featured/IMG-20250918-WA0031.jpg') }}" alt="BBHC Product 5" />
+                    <div class="product-icons">
+                        <div class="icon-circle">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="icon-circle">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="icon-circle">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="fixed-shop-btn">
+                        <button class="shop-now-btn">
+                            <i class="fas fa-shopping-bag"></i>
+                            Shop Now
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
                     <h3>Handmade Collection</h3>
                     <p>Starting from ₹199</p>
-                    <button class="shop-btn">Shop Now</button>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(4.7)</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -336,6 +453,225 @@
 </div>
 
 <style>
+/* Carousel Styles */
+.carousel-section {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background: linear-gradient(135deg, #F43397, #FF6B9D);
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.slide-content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    gap: 60px;
+}
+
+.slide-text {
+    flex: 1;
+    color: white;
+    z-index: 2;
+}
+
+.slide-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.slide-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.slide-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.carousel-btn {
+    background: white;
+    color: #F43397;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.slide-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.slide-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: white;
+    transform: scale(1.2);
+}
+
+.indicator:hover {
+    background: rgba(255,255,255,0.8);
+}
+
+/* Icon Features Section */
+.icon-features-section {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #F43397, #FF6B9D);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+.feature-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.feature-icon i {
+    font-size: 30px;
+    color: white;
+}
+
+.feature-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .slide-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 30px;
+    }
+    
+    .slide-text h1 {
+        font-size: 36px;
+    }
+    
+    .slide-image {
+        max-width: 100%;
+    }
+    
+    .slide-image img {
+        height: 250px;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+}
+
 .hero-section {
     padding: 80px 0;
     background: linear-gradient(135deg, #F43397 0%, #FF6B9D 100%);
@@ -468,13 +804,13 @@
 
 .featured-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-bottom: 40px;
 }
 
 .featured-item {
-    position: relative;
+    background: white;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -483,40 +819,151 @@
 
 .featured-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-.featured-item img {
+.product-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image-container img {
     width: 100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.featured-item:hover img {
-    transform: scale(1.1);
+.featured-item:hover .product-image-container img {
+    transform: scale(1.05);
 }
 
-.featured-overlay {
+/* Small Circle Icons */
+.product-icons {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.8));
-    color: white;
-    padding: 30px 20px 20px;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
 }
 
-.featured-item:hover .featured-overlay {
+.featured-item:hover .product-icons {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.icon-circle:hover {
+    background: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.icon-circle i {
+    font-size: 16px;
+    color: #F43397;
+    transition: color 0.3s ease;
+}
+
+.icon-circle:hover i {
+    color: #e02d85;
+}
+
+/* Fixed Shop Now Button */
+.fixed-shop-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.featured-item:hover .fixed-shop-btn {
+    opacity: 1;
     transform: translateY(0);
 }
 
-.featured-overlay h3 {
-    font-size: 20px;
+.shop-now-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #F43397, #FF6B9D);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
     font-weight: bold;
-    margin-bottom: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(244, 51, 151, 0.3);
+}
+
+.shop-now-btn:hover {
+    background: linear-gradient(135deg, #e02d85, #ff5a8a);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(244, 51, 151, 0.4);
+}
+
+.shop-now-btn i {
+    font-size: 16px;
+}
+
+/* Product Info */
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    color: #F43397;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rating i {
+    color: #ffc107;
+    font-size: 14px;
+}
+
+.rating span {
+    color: #666;
+    font-size: 12px;
+    margin-left: 5px;
 }
 
 .featured-overlay p {
@@ -667,6 +1114,143 @@
     }
 }
 </style>
+
+<script>
+// Auto-moving Carousel Animation
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    
+    // Function to show specific slide
+    function showSlide(index) {
+        // Remove active class from all slides and indicators
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        
+        // Add active class to current slide and indicator
+        slides[index].classList.add('active');
+        indicators[index].classList.add('active');
+    }
+    
+    // Function to go to next slide
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+    
+    // Auto-advance slides every 4 seconds
+    setInterval(nextSlide, 4000);
+    
+    // Add click event listeners to indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+        });
+    });
+    
+    // Pause auto-advance on hover
+    const carouselSection = document.querySelector('.carousel-section');
+    let autoAdvanceInterval;
+    
+    carouselSection.addEventListener('mouseenter', () => {
+        clearInterval(autoAdvanceInterval);
+    });
+    
+    carouselSection.addEventListener('mouseleave', () => {
+        autoAdvanceInterval = setInterval(nextSlide, 4000);
+    });
+    
+    // Product Icon Animations
+    const iconCircles = document.querySelectorAll('.icon-circle');
+    
+    iconCircles.forEach(icon => {
+        icon.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Add click animation
+            this.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1.1)';
+            }, 150);
+            
+            // Add ripple effect
+            const ripple = document.createElement('div');
+            ripple.style.position = 'absolute';
+            ripple.style.borderRadius = '50%';
+            ripple.style.background = 'rgba(244, 51, 151, 0.3)';
+            ripple.style.transform = 'scale(0)';
+            ripple.style.animation = 'ripple 0.6s linear';
+            ripple.style.left = '50%';
+            ripple.style.top = '50%';
+            ripple.style.width = '100%';
+            ripple.style.height = '100%';
+            ripple.style.marginLeft = '-50%';
+            ripple.style.marginTop = '-50%';
+            
+            this.style.position = 'relative';
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+    
+    // Shop Now Button Animations
+    const shopButtons = document.querySelectorAll('.shop-now-btn');
+    
+    shopButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Add pulse animation
+            this.style.animation = 'pulse 0.6s ease-in-out';
+            
+            setTimeout(() => {
+                this.style.animation = '';
+            }, 600);
+        });
+    });
+});
+
+// CSS Animations
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes ripple {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    
+    .icon-circle {
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    .icon-circle:nth-child(2) {
+        animation-delay: 0.5s;
+    }
+    
+    .icon-circle:nth-child(3) {
+        animation-delay: 1s;
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-5px); }
+    }
+`;
+document.head.appendChild(style);
+</script>
 
 {% endblock %}
 
