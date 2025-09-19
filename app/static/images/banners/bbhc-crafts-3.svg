@@ -13,7 +13,7 @@
   <circle cx="1450" cy="420" r="160" fill="url(#w)"/>
   <circle cx="150" cy="80" r="120" fill="url(#w)"/>
   <g transform="translate(120,120)" fill="#fff">
-    <text x="0" y="0" font-family="'Segoe UI', Arial" font-size="22" opacity="0.9">Campus Buzzer</text>
+    <text x="0" y="0" font-family="'Segoe UI', Arial" font-size="22" opacity="0.9">Campus Bazar</text>
     <text x="0" y="56" font-family="'Segoe UI', Arial" font-weight="700" font-size="64">Support Student Makers</text>
     <text x="0" y="100" font-family="'Segoe UI', Arial" font-size="22" opacity="0.9">Shop Local • Celebrate Creativity • Build Community</text>
 
