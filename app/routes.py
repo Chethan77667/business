@@ -10,6 +10,11 @@ def index():
     return render_template("index.html")
 
 
+@main_bp.route("/curtain")
+def curtain():
+    return render_template("curtain.html")
+
+
 @main_bp.route("/assets/<path:filename>")
 def assets(filename: str):
     # Serve existing static assets from the old project without moving them
