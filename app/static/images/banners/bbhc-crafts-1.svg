@@ -1,0 +1,59 @@
+<svg width="1600" height="500" viewBox="0 0 1600 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F43397"/>
+      <stop offset="100%" stop-color="#FF6B9D"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="r">
+      <rect x="0" y="0" width="1600" height="500" rx="24"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#r)">
+    <rect width="1600" height="500" fill="url(#g1)"/>
+    <!-- subtle decorative shapes -->
+    <circle cx="1400" cy="120" r="160" fill="url(#g2)"/>
+    <circle cx="120" cy="420" r="140" fill="url(#g2)"/>
+    <g fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="2">
+      <path d="M0,420 C300,320 600,520 900,420 C1200,320 1400,500 1600,430"/>
+      <path d="M0,460 C350,380 650,560 950,460 C1250,360 1450,520 1600,470"/>
+    </g>
+
+    <!-- content -->
+    <g transform="translate(120,120)" fill="#fff">
+      <text x="0" y="0" font-family="'Segoe UI', Arial, sans-serif" font-size="22" opacity="0.9">BBHC COLLEGE</text>
+      <text x="0" y="56" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" font-size="64">Handcrafted Crafts Fair</text>
+      <text x="0" y="100" font-family="'Segoe UI', Arial, sans-serif" font-size="22" opacity="0.9">Student Made • Sustainable • Unique Designs</text>
+
+      <!-- perks -->
+      <g transform="translate(0,140)">
+        <g transform="translate(0,0)">
+          <circle cx="28" cy="28" r="28" fill="rgba(255,255,255,0.2)"/>
+          <g transform="translate(14,14)" fill="#fff">
+            <path d="M22 6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-4 16H10v-2h8v2zm0-5H10v-2h8v2zm0-5H10V10h8v2z"/>
+          </g>
+          <text x="66" y="35" font-size="18">College Crafts</text>
+        </g>
+        <g transform="translate(240,0)">
+          <circle cx="28" cy="28" r="28" fill="rgba(255,255,255,0.2)"/>
+          <g transform="translate(14,14)" fill="#fff">
+            <path d="M26 4l-10 6-10-6v16l10 6 10-6V4z"/>
+          </g>
+          <text x="66" y="35" font-size="18">Handmade Gifts</text>
+        </g>
+        <g transform="translate(520,0)">
+          <circle cx="28" cy="28" r="28" fill="rgba(255,255,255,0.2)"/>
+          <g transform="translate(14,14)" fill="#fff">
+            <path d="M24 8h-6l-2-2H8L6 8H2v16h28V8h-6zM16 24a6 6 0 1 1 0-12 6 6 0 0 1 0 12z"/>
+          </g>
+          <text x="66" y="35" font-size="18">Campus Market</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
+
+
