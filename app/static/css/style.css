@@ -572,6 +572,99 @@ nav ul li:hover .subMenu{
     text-transform: capitalize;
 }
 
+/* Footer styles (structure like bbhegdecollege.com, content unchanged) */
+.site-footer{
+    background: linear-gradient(180deg, #0d1224 0%, #0b0d17 100%);
+    color: #cfd3dc;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+.site-footer::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(1000px 300px at 10% -10%, rgba(255,255,255,0.06), transparent 60%),
+        radial-gradient(700px 250px at 90% -20%, rgba(255,255,255,0.04), transparent 60%),
+        repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 6px);
+    pointer-events: none;
+}
+.footer-top{
+    padding: 48px 0;
+    background: transparent;
+}
+.footer-bottom{
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 14px 0;
+    background: #090b14;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+
+    justify-items: center;   /* centers items horizontally */
+    align-items: center;     /* centers items vertically */
+}
+.footer-text{
+    font-size: 14px;
+    color: #cfd3dc;
+    justify-items: center;   /* centers items horizontally */
+    align-items: center;   
+}
+.footer-col h3{
+    color: #ffffff;
+    margin: 0 0 12px 0;
+    font-size: 18px;
+}
+.footer-col h3::after{
+    content: "";
+    display: block;
+    width: 44px;
+    height: 3px;
+    margin-top: 8px;
+    background: linear-gradient(90deg, var(--brand), var(--brand-accent));
+    border-radius: 2px;
+}
+.footer-col ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-col ul li{ margin: 8px 0; }
+.footer-col a{
+    color: #cfd3dc;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+.footer-col a:hover{
+    color: #ffffff;
+    text-decoration: underline;
+}
+.social-links{ display:flex; align-items:center; gap:12px; }
+.social-links a{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    transition: transform .2s ease, background .2s ease;
+    overflow: hidden;
+}
+.social-links a:hover{
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, var(--brand), var(--brand-accent));
+}
+.social-links a i{ font-size:16px; line-height:1; }
+.social-links a img{ width:18px; height:18px; object-fit:contain; display:block; }
+
 /* Reduced motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
     nav ul li::after,
