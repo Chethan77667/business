@@ -2,8 +2,14 @@
     box-sizing: border-box;
 }
 :root{
-    --hoverTextColor:rgb(244, 51, 151);
+    --brand: #F43397;
+    --brand-accent: #FF6B9D;
+    --brand-dark: #e02d85;
+    --hoverTextColor: var(--brand);
     --textColor : rgb(87, 85, 85);
+    --nav-bg: #ffffff;
+    --nav-text: rgb(36, 31, 31);
+    --nav-border: #e9ecef;
 }
 
 
@@ -177,9 +183,9 @@ form{
 /**navigation css ***/
 nav{
     width: 100%;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--nav-border);
     height: 54px;
-    
+    background: var(--nav-bg);
 }
 nav ul{
     padding: 0;
@@ -197,14 +203,33 @@ nav ul li{
     display: flex;
     align-items: center;
     margin: 0;
-    /* background-color: red; */
+    position: relative;
+    padding: 0 12px;
+    color: var(--nav-text);
+    transition: color .2s ease;
     border-bottom: 2px solid transparent;
     cursor: pointer; 
     
 }
 nav ul li:hover{
-    color:var(--hoverTextColor);
-    border-bottom: 4px solid var(--hoverTextColor);
+    color:var(--brand);
+}
+/* Animated underline */
+nav ul li::after{
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 0px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--brand), var(--brand-accent));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s ease;
+    border-radius: 2px;
+}
+nav ul li:hover::after{
+    transform: scaleX(1);
 }
 
 
@@ -218,14 +243,23 @@ nav ul li:hover{
     background-color: white;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    display: none;
+    /* display: none; */
     margin: 0px 10px;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 12px rgba(0,0,0,0.08);
     padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+    pointer-events: none;
 }
 
 nav ul li:hover .subMenu{
-    display: block;
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+    pointer-events: auto;
 }
 
 .subMenu p{
@@ -536,4 +570,12 @@ nav ul li:hover .subMenu{
 }
 .product_name{
     text-transform: capitalize;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    nav ul li::after,
+    .subMenu {
+        transition: none;
+    }
 }
