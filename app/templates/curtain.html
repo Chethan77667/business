@@ -428,7 +428,7 @@
     
     <div class="curtain-container">
         <!-- Background Video -->
-        <video class="background-video" muted loop>
+        <video class="background-video" muted>
             <source src="{{ url_for('static', filename='img/v.mp4') }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -506,7 +506,7 @@
             
             // Keep brand visible for 8 seconds, then redirect
             setTimeout(() => {
-                window.location.href = 'http://192.168.10.5:5000';
+                window.location.href = '/';
             }, 48000); // 48 seconds total (38s video + 8s brand display + 2s loading)
         }
         
