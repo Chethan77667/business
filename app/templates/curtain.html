@@ -18,6 +18,7 @@
             overflow: hidden;
             font-family: 'Arial', sans-serif;
             position: relative;
+            z-index: 1;
         }
 
         /* Background Video Styling */
@@ -494,20 +495,27 @@
                 backgroundVideo.classList.add('show');
             }, 500);
             
-            // Show brand after video completes (38 seconds)
-            setTimeout(() => {
-                brandContainer.classList.add('show');
-            }, 38000); // 38 seconds
-            
-            // Show loading text after brand appears
-            setTimeout(() => {
-                loadingText.classList.add('show');
-            }, 40000); // 40 seconds
-            
-            // Keep brand visible for 8 seconds, then redirect
-            setTimeout(() => {
-                window.location.href = '/';
-            }, 48000); // 48 seconds total (38s video + 8s brand display + 2s loading)
+            // Add event listener for when video ends
+            backgroundVideo.addEventListener('ended', function() {
+                // Hide video smoothly
+                backgroundVideo.style.transition = 'opacity 1s ease-in-out';
+                backgroundVideo.style.opacity = '0';
+                
+                // Show brand container after video fades out
+                setTimeout(() => {
+                    brandContainer.classList.add('show');
+                }, 1000); // 1 second after video ends
+                
+                // Show loading text after brand appears
+                setTimeout(() => {
+                    loadingText.classList.add('show');
+                }, 3000); // 3 seconds after video ends
+                
+                // Redirect after showing brand and loading text
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 8000); // 8 seconds after video ends
+            });
         }
         
         // Initialize particles on page load
