@@ -7,12 +7,12 @@ main_bp = Blueprint("main", __name__)
 
 @main_bp.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("curtain.html")
 
 
 @main_bp.route("/curtain")
 def curtain():
-    return render_template("curtain.html")
+    return render_template("index.html")
 
 
 @main_bp.route("/assets/<path:filename>")
